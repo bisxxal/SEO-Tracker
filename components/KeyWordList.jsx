@@ -14,14 +14,8 @@ function KeyWordList({keyWords ,rank , domain}) {
                 <div className=" bg-slate-100 border border-b-4 border-blue-300 px-4 py-2 text-black text-xl flex items-center justify-between rounded-lg grow">
                    
                     <Link href={`${domain}/${item.keyword}`} className=' capitalize text-blue-600 font-bold text-lg' >{item.keyword}</Link>
-                    <div className=' flex items-center justify-center w-[400px] min-h-16 '>
-                      {/* {rank && rank.map((r)=>{
-                        if( r.keyword === item.keyword){
-                        return( */}
-                          <ChatCard results={rank}/>
-                        {/* )
-                      }
-                      })} */}
+                    <div className=' flex items-center justify-center w-[400px] min-h-16 '> 
+                          <ChatCard results={rank}/> 
                     </div>
                 </div>
             </div>

@@ -3,10 +3,14 @@ import { sortBy, sumBy, uniqBy } from "lodash";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, YAxis } from "recharts";
 
 function ChatCard({ results }) {
+
+   
+
   results = (results || [])?.filter((r) => r.rank);
   if (!results?.length) {
     return "";
   }
+  
   const lowestRank = sortBy(results, "rank").reverse()?.[0].rank;
   const domainLow = lowestRank + 3;
   let data = results;
